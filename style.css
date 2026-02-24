@@ -1,0 +1,271 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #666;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+.nav-left {
+    
+    width: 150px;
+    height: 40px;
+
+}
+.log {
+    width: 150px;
+    height: 40px;
+}
+
+.nav-center a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #111111;
+    transition: 0.3s;
+}
+
+.nav-center a:hover {
+    color: #fc6621;
+}
+
+.btn-primary {
+    background: #f12b2b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #9b0000;
+   
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 0, 34);
+    font-size: 25px;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.1s linear;
+}
+
+.layer-back {
+    background-image: url("img/fondo.jpg");
+    z-index: 1;
+}
+
+.layer-middle {
+    background-image: url("img/fondo.jpg");
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.layer-front {
+    background-image: url("img/fondo.jpg");
+    opacity: 0.3;
+    z-index: 3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 4;
+    max-width: 700px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about-box {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: #ff9900;
+    font-size: 1.2rem;
+}
+
+/* ================= SERVICES ================= */
+.services {
+    padding: 100px 0;
+    background: #fab861;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #0077ff;
+    margin-bottom: 15px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #111;
+    color: #fff;
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    
+    
+      
+}
+
+.footer-container {
+    display: flex;
+    width: 100%;
+    gap: 15rem;
+
+}
+.footer-left {
+    
+
+
+    
+}
+
+.footer-center a {
+    display: flex;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+   
+    margin: 1rem 0rem;
+    
+}
+
+.footer-center a:hover {
+    color: #fff;
+}
+
+.footer-right a {
+    display: grid;
+    margin: 2rem 0rem;
+    color: #fff;
+    font-size: 1.2rem;
+    
+}
+
+/* WhatsApp Floating Button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+/* ================= REVEAL ANIMATION ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px){
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-center {
+        display: none;
+    }
+}
